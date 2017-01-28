@@ -1,0 +1,369 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lab.tiyo.trigonometry.fragments.TriSegitigaSiku">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_margin="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/triangle_1"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:layout_gravity="left|top"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B"
+                    android:layout_gravity="left|bottom"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C"
+                    android:layout_gravity="right|bottom"/>
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--first angle value input-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/angle_a_label"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="A = "/>
+                    <EditText
+                        android:id="@+id/angle_a_deg"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:focusable="false"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deg"/>
+
+                </LinearLayout>
+
+                <!--second angle value input-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/angle_b_label"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="B = "/>
+                    <EditText
+                        android:id="@+id/angle_b_deg"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:enabled="false"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deg"/>
+
+
+                </LinearLayout>
+
+                <!--third angle value input-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/angle_c_label"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="C = "/>
+                    <EditText
+                        android:id="@+id/angle_c_deg"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:focusable="false"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deg"/>
+
+                </LinearLayout>
+
+
+                <!--AB angle value input-->
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_ab"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="AB = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:id="@+id/ab_length"
+                        android:layout_toRightOf="@+id/label_ab"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <!--BC angle value input-->
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_bc"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="BC = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:id="@+id/bc_length"
+                        android:layout_toRightOf="@+id/label_bc"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <!--CD angle value input-->
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_ca"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="CA = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:id="@+id/ca_length"
+                        android:layout_toRightOf="@+id/label_ca"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <!--A sin cos tan value-->
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_sin_a"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sin A = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:id="@+id/sin_a_val"
+                        android:layout_toRightOf="@+id/label_sin_a"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_cos_a"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cos A = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:id="@+id/cos_a_val"
+                        android:layout_toRightOf="@+id/label_cos_a"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_tan_a"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tan A = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:id="@+id/tan_a_val"
+                        android:layout_toRightOf="@+id/label_tan_a"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <!--B sin cos tan value-->
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_sin_b"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sin B = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:id="@+id/sin_b_val"
+                        android:layout_toRightOf="@+id/label_sin_b"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_cos_b"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cos B = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:id="@+id/cos_b_val"
+                        android:layout_toRightOf="@+id/label_cos_b"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_tan_b"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tan B = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:id="@+id/tan_b_val"
+                        android:layout_toRightOf="@+id/label_tan_b"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+                <!--C sin cos tan value-->
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_sin_c"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sin C = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:layout_toRightOf="@+id/label_sin_c"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/sin_c_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_cos_c"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cos C = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:id="@+id/cos_c_val"
+                        android:layout_toRightOf="@+id/label_cos_c"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_tan_c"
+                        android:layout_centerVertical="true"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tan C = "/>
+
+                    <lab.tiyo.fraction.models.FractionView
+                        android:layout_toRightOf="@+id/label_tan_c"
+                        android:id="@+id/tan_c_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,213 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="lab.tiyo.trigonometry.fragments.SimpleCalculator">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/editText" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <GridLayout
+                android:id="@+id/g1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:background="#dadada">
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/sin"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:src="@drawable/sin"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/cos"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:src="@drawable/cos"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/tan"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:src="@drawable/tan"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/asin"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:src="@drawable/asin"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/acos"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:src="@drawable/acos"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/atan"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:src="@drawable/atan"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/n1"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:src="@drawable/n1"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/n2"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:src="@drawable/n2"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/n3"
+                    android:layout_row="2"
+                    android:layout_column="2"
+                    android:src="@drawable/n3"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/n4"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:src="@drawable/n4"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/n5"
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    android:src="@drawable/n5"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/n6"
+                    android:layout_row="3"
+                    android:layout_column="2"
+                    android:src="@drawable/n6"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/n7"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:src="@drawable/n7"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/n8"
+                    android:layout_row="4"
+                    android:layout_column="1"
+                    android:src="@drawable/n8"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="@dimen/simple_calculator_operator_height"
+                    android:id="@+id/n9"
+                    android:layout_row="4"
+                    android:layout_column="2"
+                    android:src="@drawable/n9"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+            </GridLayout>
+            <GridLayout
+                android:id="@+id/g2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:background="#dadada"
+                android:layout_alignTop="@+id/g1"
+                android:layout_toRightOf="@+id/g1">
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="208dp"
+                    android:id="@+id/minus"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:src="@drawable/minus"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/simple_calculator_operator_width"
+                    android:layout_height="210dp"
+                    android:id="@+id/n0"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:src="@drawable/n0"
+                    android:background="#fff"
+                    android:layout_margin="3dp"/>
+            </GridLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

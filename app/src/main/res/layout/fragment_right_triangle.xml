@@ -1,0 +1,24 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="lab.tiyo.trigonometry.fragments.RightTriangleFragment">
+
+    <lab.tiyo.trigonometry.models.CustomExpandableContainer
+        android:id="@+id/description_custom_expandable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <lab.tiyo.trigonometry.models.CustomExpandableContainer
+        android:id="@+id/question_custom_expandable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <lab.tiyo.trigonometry.models.CustomExpandableContainer
+        android:id="@+id/answer_custom_expandable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
