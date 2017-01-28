@@ -640,7 +640,7 @@ public class RightTriangleRule {
 
             ItemDescriptionDialog leftOperand1 = new ItemDescriptionDialog();
             ArrayList<ItemDescriptionDialog> listRightOperand1 = new ArrayList<>();
-            ItemDescriptionDialog rightOperand1_1 = new ItemDescriptionDialog();
+            ItemDescriptionDialog rightOperand1_1 = listItemsDescription.get(ConstantHelper.TAN_A);
 
             listRightOperand1.add(rightOperand1_1);
 
@@ -652,9 +652,6 @@ public class RightTriangleRule {
 
             leftOperand1.setTitle("tan <A");
             leftOperand1.setInputType(ItemDescriptionDialog.INPUT_CONSTANTA);
-
-            rightOperand1_1.setTNumber(listItemsDescription.get(ConstantHelper.TAN_A).getTNumber());
-            rightOperand1_1.setInputType(ItemDescriptionDialog.INPUT_LENGTH_TYPE);
 
             /**
              * describe answer 2
@@ -2567,10 +2564,10 @@ public class RightTriangleRule {
             finalAnswers.add(answer1);
             answers.add(answer1);
 
-            leftOperand1.setTitle("tan A");
+            leftOperand1.setTitle("tan <A");
             leftOperand1.setInputType(ItemDescriptionDialog.INPUT_CONSTANTA);
 
-            rightOperand1_1.setTitle("b // a");
+            rightOperand1_1.setTitle("BC // AB");
             rightOperand1_1.setInputType(ItemDescriptionDialog.INPUT_CONSTANTA);
 
             /**
@@ -2594,7 +2591,7 @@ public class RightTriangleRule {
             finalAnswers.add(answer2);
             answers.add(answer2);
 
-            leftOperand2.setTitle("tan A");
+            leftOperand2.setTitle("tan <A");
             leftOperand2.setInputType(ItemDescriptionDialog.INPUT_CONSTANTA);
 
             rightOperand2_2.setTitle(" // ");
@@ -2617,7 +2614,7 @@ public class RightTriangleRule {
             finalAnswers.add(answer3);
             answers.add(answer3);
 
-            leftOperand3.setTitle("tan A");
+            leftOperand3.setTitle("tan <A");
             leftOperand3.setInputType(ItemDescriptionDialog.INPUT_CONSTANTA);
 
             rightOperand3_1.setTNumber(MathHelper.division(rightOperand2_1.getTNumber(), rightOperand2_3.getTNumber()));
